@@ -1,6 +1,14 @@
 [
     {
-        "title": "Test post title",
-        "body": "Test post body"
+        "title": "Test post title 1",
+        "body": "Test post body 1"
+    },
+    {
+        "title": "Test post title 2",
+        "body": "Test post body 2"
+    },
+    {
+        "title": "Test post title 3",
+        "body": "Test post body 3"
     }
 ]
