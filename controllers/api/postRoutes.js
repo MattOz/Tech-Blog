@@ -1,8 +1,8 @@
-
 const router = require('express').Router();
 const Post = require('../../models/Post');
 // const withAuth = require('../../utils/auth')
 
+// home route, gets all posts
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll();
