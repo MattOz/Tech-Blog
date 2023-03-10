@@ -8,6 +8,14 @@ Comment.init(
     body: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      foreignKey: true,
+    },
+    postId: {
+      type: DataTypes.INTEGER,
+      foreignKey: true,
     }
   },
   {

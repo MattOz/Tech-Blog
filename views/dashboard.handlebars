@@ -1,15 +1,17 @@
+{{#each posts as |post| }}
+
 <div class="row justify-content-evenly">
 
     <div class="card">
 
-        <h5 class="card-header">Your Dashboard</h5>
+        <h5 class="card-header">{{post.title}}</h5>
 
         <div class="card-body">
-
-        {{!-- display all user posts --}}
-        
+            <p class="card-text">{{post.body}}</p>
         </div>
 
     </div>
 
 </div>
+
+{{/each}}

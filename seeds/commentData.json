@@ -1,5 +1,7 @@
 [
     {
-        "body": "test comment"
+        "body": "test comment",
+        "userId": 1,
+        "postId": 1
     }
 ]
