@@ -24,3 +24,23 @@ async function newPostHandler(event) {
 }
 
 document.querySelector('#submitForm').addEventListener('submit', newPostHandler);
+
+// delete post 
+const deleteButton = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+        const id = event.target.getAttribute('data-id');
+        const response = await fetch(`/api/posts/${id}`, {
+            method: 'DELETE',
+        });
+        if (response.ok) {
+            window.location.reload();
+        } else {
+            alert('Failed to delete post');
+        }
+    }
+};
+
+var buttonEls = document.querySelectorAll('.del-button')
+for (let i = 0; i < buttonEls.length; i++) {
+    buttonEls[i].addEventListener('click', deleteButton);
+}
