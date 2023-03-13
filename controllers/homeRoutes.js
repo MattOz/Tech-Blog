@@ -6,7 +6,6 @@ const { Post, User, Comment } = require('../models');
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll();
-    console.log(postData);
     const posts = postData.map(post => post.get({plain:true}))
     res.render('homepage', {posts, loggedIn: req.session.loggedIn})
   } catch(err){
@@ -18,12 +17,8 @@ router.get('/', async (req, res) => {
 router.get('/dashboard', async (req, res) => {
   try {
     // const postData = await Post.findByPk(req.session.userId);\
-    console.log(req.params.userId)
     const postData = await Post.findAll({ where: { userId: req.session.userId } });
-    console.log(postData);
-    console.log("print out posts")
     const posts = postData.map(post => post.get({plain:true}))
-    console.log(posts);
     res.render('dashboard', {posts, loggedIn: req.session.loggedIn })
   } catch(err){
     res.status(500).json(err);

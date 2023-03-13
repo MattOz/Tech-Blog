@@ -2,16 +2,55 @@
 
 <div class="row justify-content-evenly">
 
-    <div class="card">
+  <div class="container col-9">
 
-        <h5 class="card-header">{{post.title}}</h5>
+    <div class="card mb-3">
 
-        <div class="card-body">
-            <p class="card-text">{{post.body}}</p>
-        </div>
+      <h5 class="card-header">{{post.title}}</h5>
+
+      <div class="card-body">
+        <p class="card-text">{{post.body}}</p>
+      </div>
 
     </div>
+
+  </div>
 
 </div>
 
 {{/each}}
+
+<div class="row justify-content-evenly">
+
+  <div class="container col-9">
+
+    <div class="dropdown">
+
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+        data-bs-auto-close="outside">
+        New Post
+      </button>
+
+      <form class="dropdown-menu w-100 px-3" id="submitForm">
+
+        <div class="mb-3">
+          <label class="form-label" rows="3">Title:</label>
+          <input type="text" class="form-control" id="postTitle">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" rows="3">Post:</label>
+          <input type="text" class="form-control" id="postInput">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="/js/dashboard.js"></script>

@@ -1,17 +1,17 @@
 [
     {
-        "title": "Test post title 1",
+        "title": "Sample post 1",
         "userId": 1,
-        "body": "Test post body 1"
+        "body": "Sample text"
     },
     {
-        "title": "Test post title 2",
+        "title": "Sample post 2",
         "userId": 1,
-        "body": "Test post body 2"
+        "body": "Sample text"
     },
     {
-        "title": "Test post title 3",
+        "title": "Sample post 3",
         "userId": 2,
-        "body": "Test post body 3"
+        "body": "Sample text"
     }
 ]
